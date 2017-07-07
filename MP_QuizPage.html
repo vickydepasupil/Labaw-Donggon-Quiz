@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Labaw Donggon</title>
+</head>
+
+<link rel="stylesheet" href="MP_QuizPage.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div id="backPhoto">
+</div>
+
+<div id="footer">
+</div>
+
+<div id="topBar">
+<p id="topText">Labaw Donggon: A Panayanon Hero</p>
+</div>
+
+<div id="mainBox">
+
+<div id="textBox">
+</div>
+
+<div id="photoBanner">
+<img id="PhilippineDieties" src="Images/PhilippineDietiesCOPY.jpg">
+</div>
+
+<div id="nav">
+<ul id="navBar">
+	<li class="liNav"><a class="aNav" href="MP_HomePage.html">Home</a></li>
+	<li class="liNav"><a class="aNav" href="MP_QuizPage.html">Quiz</a></li>
+</ul>
+</div>
+
+<div id="textContent">
+<h2 id="qNum">The Life and Adventures of Labaw Donggon</h2>
+<h4 id="qBody">How well do you know the story?</h4>
+
+<div id="qNav">
+<button id="startQuiz" type="button" class="btn btn-info btn-lg">Let's Begin!</button>
+</div>
+
+<div class="progress quizProg">
+<div id="progBar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+
+	$(document).ready(Execute);
+
+	var counter = 0;
+	var score = 0;
+	var Q1 = 0;	var Q2 = 0;	var Q3 = 0;	var Q4 = 0;	var Q5 = 0;	var Q6 = 0;	var Q7 = 0;	var Q8 = 0;	var Q9 = 0;	var Q10 = 0;
+	var Q1T = 0; var Q2T = 0; var Q3T = 0; var Q4T = 0; var Q5T = 0; var Q6T = 0; var Q7T = 0; var Q8T = 0; var Q9T = 0; var Q10T = 0;
+	var SQ1 = 0; var SQ2 = 0; var SQ3 = 0; var SQ4 = 0; var SQ5 = 0; var SQ6 = 0; var SQ7 = 0; var SQ8 = 0; var SQ9 = 0; var SQ10 = 0;
+
+	function valOne() {
+		score = 1;
+	}
+
+	function valZero() {
+		score = 0;
+	}
+
+	function Execute() {
+		$("#startQuiz").click(question1);
+	}
+
+	function question1() {
+	
+		document.getElementById('qNum').innerHTML = "Question 1";
+		document.getElementById('qBody').innerHTML = "Who among the following is not a son of the goddess Alunsina?";
+
+		$("#q2opt").remove();
+		$("#qBody").append('<div style="margin-left:25px;" id="q1opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">Dumalapdap</button> <button onclick="valOne()" type="button" class="btn btn-primary">Saragnayan</button> <button onclick="valZero()" type="button" class="btn btn-primary">Labaw Donggon</button> <button onclick="valZero()" type="button" class="btn btn-primary">Humadapnon</button> </div>');
+
+		$("#startQuiz").remove();
+		$("#q1opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question2()" type="button" class="btn btn-info btn-sm">Next</button> </div>');		
+
+		$("#progBar").attr('aria-valuenow', 10).css('width', 81);
+		document.getElementById('progBar').innerHTML = "10%";
+	}
+
+	function question2() {
+		Q1 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 2";
+		document.getElementById('qBody').innerHTML = "On his quest to win the hand of Abyang Durunuun, whom did Labaw Donggon have to fight?";
+
+		$("#q1opt").remove();
+		$("#qBody").append('<div id="q2opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">the mountain Gadlum</button> <button onclick="valZero()" type="button" class="btn btn-primary">the beautiful Malitong Yawa</button> <button onclick="valZero()" type="button" class="btn btn-primary">the hero Aso Mangga</button> <button onclick="valOne()" type="button" class="btn btn-primary">the giant Sikay Padalogdog</button> </div>');
+
+		$("#qNav").remove();
+		$("#q2opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question1()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question3()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 20).css('width', 162);
+		document.getElementById('progBar').innerHTML = "20%";
+	}
+
+	function question3() {
+		Q2 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 3";
+		document.getElementById('qBody').innerHTML = "What is the name of Labaw Donggon's father?";
+
+		$("#q2opt").remove();
+		$("#qBody").append('<div id="q3opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">Makaptan</button> <button onclick="valOne()" type="button" class="btn btn-primary">Datu Paubari</button> <button onclick="valZero()" type="button" class="btn btn-primary">Tarambang Burok</button> <button onclick="valZero()" type="button" class="btn btn-primary">Suklang Malayon</button> </div>');
+
+		$("#qNav").remove();
+		$("#q3opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question2()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question4()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 30).css('width', 243);
+		document.getElementById('progBar').innerHTML = "30%";
+	}
+
+	function question4() {
+		Q3 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 4";
+		document.getElementById('qBody').innerHTML = "Which historical text does the story of Labaw Donggon come from?";
+
+		$("#q3opt").remove();
+		$("#qBody").append('<div id="q4opt" class="qOptions"> <button onclick="valOne()" type="button" class="btn btn-primary">Hinilawod</button> <button onclick="valZero()" type="button" class="btn btn-primary">Maragtas</button> <button onclick="valZero()" type="button" class="btn btn-primary">Hudhud</button> <button onclick="valZero()" type="button" class="btn btn-primary">Ramayana</button> </div>');
+
+		$("#qNav").remove();
+		$("#q4opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question3()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question5()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 40).css('width', 324);
+		document.getElementById('progBar').innerHTML = "40%";
+	}
+
+	function question5() {
+		Q4 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 5";
+		document.getElementById('qBody').innerHTML = "As part of the dowry, Angoy Ginbitinan's father required Labaw Donggon to kill the monster Manalintad.<br>To prove that he has defeated Manalintad, what did Labaw Donggon take to Angoy Ginbitinan's father?";
+
+		$("#q4opt").remove();
+		$("#qBody").append('<div id="q5opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">a golden Sarimanok</button> <button onclick="valZero()" type="button" class="btn btn-primary">gifts from the underworld</button> <button onclick="valOne()" type="button" class="btn btn-primary">the tail of Manalintad</button> <button onclick="valZero()" type="button" class="btn btn-primary">a magical belt</button> </div>');
+
+		$("#qNav").remove();
+		$("#q5opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question4()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question6()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 50).css('width', 405);
+		document.getElementById('progBar').innerHTML = "50%";
+	}
+
+	function question6() {
+		Q5 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 6";
+		document.getElementById('qBody').innerHTML = "In the duel for Malitong Yawa, how long did Labaw Donggon submerge Saragnayan underwater?";
+
+		$("#q5opt").remove();
+		$("#qBody").append('<div id="q6opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">10 years</button> <button onclick="valZero()" type="button" class="btn btn-primary">5 years</button> <button onclick="valZero()" type="button" class="btn btn-primary">20 years</button> <button onclick="valOne()" type="button" class="btn btn-primary">7 years</button> </div>');
+
+		$("#qNav").remove();
+		$("#q6opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question5()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question7()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 60).css('width', 486);
+		document.getElementById('progBar').innerHTML = "60%";
+	}
+
+	function question7() {
+		Q6 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 7";
+		document.getElementById('qBody').innerHTML = "The following are the sons of Labaw Donggon except:";
+
+		$("#q6opt").remove();
+		$("#qBody").append('<div id="q7opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">Abyang Baranugon</button> <button onclick="valOne()" type="button" class="btn btn-primary">Maklium-sa-t’wan</button> <button onclick="valZero()" type="button" class="btn btn-primary">Aso Mangga</button> </div>');
+
+		$("#qNav").remove();
+		$("#q7opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question6()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question8()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 70).css('width', 567);
+		document.getElementById('progBar').innerHTML = "70%";
+	}
+
+	function question8() {
+		Q7 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 8";
+		document.getElementById('qBody').innerHTML = "How did Labaw Donggon and his brothers grow up?";
+
+		$("#q7opt").remove();
+		$("#qBody").append('<div id="q8opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">They were dipped in a magical potion and blessed</button> <button onclick="valOne()" type="button" class="btn btn-primary">A cold, northern wind instantly turned them to young men</button> </div>');
+
+		$("#qNav").remove();
+		$("#q8opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question7()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question9()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 80).css('width', 648);
+		document.getElementById('progBar').innerHTML = "80%";
+	}
+
+	function question9() {
+		Q8 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 9";
+		document.getElementById('qBody').innerHTML = "Who freed Labaw Donggon from Saragnayan?";
+
+		$("#q8opt").remove();
+		$("#qBody").append('<div id="q9opt" class="qOptions"> <button onclick="valZero()" type="button" class="btn btn-primary">his magical rooster</button> <button onclick="valZero()" type="button" class="btn btn-primary">his pet dog</button> <button onclick="valZero()" type="button" class="btn btn-primary">Alunsina</button> <button onclick="valOne()" type="button" class="btn btn-primary">his sons</button> </div>');
+
+		$("#qNav").remove();
+		$("#q9opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question8()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="question10()" type="button" class="btn btn-info btn-sm">Next</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 90).css('width', 729);
+		document.getElementById('progBar').innerHTML = "90%";
+	}
+
+	function question10() {
+		Q9 = score;
+		score = 0;
+
+		document.getElementById('qNum').innerHTML = "Question 10";
+		document.getElementById('qBody').innerHTML = "The following were the wives of Labaw Donggon except:";
+
+		$("#q9opt").remove();
+		$("#qBody").append('<div id="q10opt" class="qOptions"> <button onclick="valOne()" type="button" class="btn btn-primary">Suklang Malayon</button> <button onclick="valZero()" type="button" class="btn btn-primary">Malitong Yawa</button> <button onclick="valZero()" type="button" class="btn btn-primary">Abyang Durunuun</button> <button onclick="valZero()" type="button" class="btn btn-primary">Angoy Ginbitinan</button> </div>');
+
+		$("#qNav").remove();
+		$("#q10opt").append('<div id="qNav" style="margin-left:0px;" class="questionNav"> <button onclick="question9()" type="button" class="btn btn-info btn-sm">Back</button> <button onclick="processResults()" type="button" class="btn btn-info btn-sm">Process Results</button> </div>');
+
+		$("#progBar").attr('aria-valuenow', 100).css('width', 810);
+		document.getElementById('progBar').innerHTML = "100%";
+	}
+
+	function processResults() {
+		Q10 = score;
+		score = 0;
+
+		counter++;
+
+		Q1T = Q1T + Q1;
+		Q2T = Q2T + Q2;
+		Q3T = Q3T + Q3;
+		Q4T = Q4T + Q4;
+		Q5T = Q5T + Q5;
+		Q6T = Q6T + Q6;
+		Q7T = Q7T + Q7;
+		Q8T = Q8T + Q8;
+		Q9T = Q9T + Q9;
+		Q10T = Q10T + Q10;
+
+		document.getElementById('qNum').innerHTML = "You have completed the quiz.";
+		document.getElementById('qBody').innerHTML = "How did you do?";
+
+		$("#q10opt").remove();
+		$("#qNav").remove();
+		$("#qBody").append('<div style="margin-left:25px; margin-top:20px;"> <button onclick="question1()" type="button" class="btn btn-info btn-lg">Take Again</button> <button onclick="viewResults()" type="button" class="btn btn-info btn-lg">View All Results</button> </div>');
+	}
+
+	function viewResults() {
+
+		$("#textContent").remove();
+
+		//Question 1 Answers, with Result Page Title
+		$("#navBar").append('<div style="margin-top:70px;"> <h4 id="resultTitle">The following show your quiz result statistics:</h4> <h5 class="resultHeader">Question 1</h5> <div class="progress indivResults"> <div id="statsQ1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ1 = Q1T/counter;
+		var valWidth1 = SQ1*810;
+		var ariaValNow1 = SQ1*100;
+
+		$("#statsQ1").attr('aria-valuenow', ariaValNow1).css('width', valWidth1);
+		document.getElementById('statsQ1').innerHTML = Math.round(ariaValNow1) + '%Correct';
+
+		//Question 2 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 2</h5> <div class="progress indivResults"> <div id="statsQ2" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ2 = Q2T/counter;
+		var valWidth2 = SQ2*810;
+		var ariaValNow2 = SQ2*100;
+
+		$("#statsQ2").attr('aria-valuenow', ariaValNow2).css('width', valWidth2);
+		document.getElementById('statsQ2').innerHTML = Math.round(ariaValNow2) + '%Correct';
+
+		//Question 3 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 3</h5> <div class="progress indivResults"> <div id="statsQ3" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ3 = Q3T/counter;
+		var valWidth3 = SQ3*810;
+		var ariaValNow3 = SQ3*100;
+
+		$("#statsQ3").attr('aria-valuenow', ariaValNow3).css('width', valWidth3);
+		document.getElementById('statsQ3').innerHTML = Math.round(ariaValNow3) + '%Correct';
+
+		//Question 4 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 4</h5> <div class="progress indivResults"> <div id="statsQ4" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ4 = Q4T/counter;
+		var valWidth4 = SQ4*810;
+		var ariaValNow4 = SQ4*100;
+
+		$("#statsQ4").attr('aria-valuenow', ariaValNow4).css('width', valWidth4);
+		document.getElementById('statsQ4').innerHTML = Math.round(ariaValNow4) + '%Correct';
+
+		//Question 5 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 5</h5> <div class="progress indivResults"> <div id="statsQ5" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ5 = Q5T/counter;
+		var valWidth5 = SQ5*810;
+		var ariaValNow5 = SQ5*100;
+
+		$("#statsQ5").attr('aria-valuenow', ariaValNow5).css('width', valWidth5);
+		document.getElementById('statsQ5').innerHTML = Math.round(ariaValNow5) + '%Correct';
+
+		//Question 6 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 6</h5> <div class="progress indivResults"> <div id="statsQ6" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ6 = Q6T/counter;
+		var valWidth6 = SQ6*810;
+		var ariaValNow6 = SQ6*100;
+
+		$("#statsQ6").attr('aria-valuenow', ariaValNow6).css('width', valWidth6);
+		document.getElementById('statsQ6').innerHTML = Math.round(ariaValNow6) + '%Correct';
+
+		//Question 7 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 7</h5> <div class="progress indivResults"> <div id="statsQ7" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ7 = Q7T/counter;
+		var valWidth7 = SQ7*810;
+		var ariaValNow7 = SQ7*100;
+
+		$("#statsQ7").attr('aria-valuenow', ariaValNow7).css('width', valWidth7);
+		document.getElementById('statsQ7').innerHTML = Math.round(ariaValNow7) + '%Correct';
+
+		//Question 8 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 8</h5> <div class="progress indivResults"> <div id="statsQ8" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ8 = Q8T/counter;
+		var valWidth8 = SQ8*810;
+		var ariaValNow8 = SQ8*100;
+
+		$("#statsQ8").attr('aria-valuenow', ariaValNow8).css('width', valWidth8);
+		document.getElementById('statsQ8').innerHTML = Math.round(ariaValNow8) + '%Correct';
+
+		//Question 9 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 9</h5> <div class="progress indivResults"> <div id="statsQ9" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ9 = Q9T/counter;
+		var valWidth9 = SQ9*810;
+		var ariaValNow9 = SQ9*100;
+
+		$("#statsQ9").attr('aria-valuenow', ariaValNow9).css('width', valWidth9);
+		document.getElementById('statsQ9').innerHTML = Math.round(ariaValNow9) + '%Correct';
+
+		//Question 10 Answers
+		$("#navBar").append('<div> <h5 class="resultHeader">Question 10</h5> <div class="progress indivResults"> <div id="statsQ10" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div> </div> </div>');
+
+		SQ10 = Q10T/counter;
+		var valWidth10 = SQ10*810;
+		var ariaValNow10 = SQ10*100;
+
+		$("#statsQ10").attr('aria-valuenow', ariaValNow10).css('width', valWidth10);
+		document.getElementById('statsQ10').innerHTML = Math.round(ariaValNow10) + '%Correct';	
+	}
+
+
+</script>
+
+</html>

@@ -1,0 +1,187 @@
+html {
+	height:100%;
+}
+
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#backPhoto {
+	background:repeat;
+	background-image: url(Images/RattanLight.jpg);
+	background-image: url(Images/Woven2.jpg);
+	background-size:300px 212px;
+	position:fixed;
+	width:100%;
+	height:100%;
+}
+
+#topBar {
+	position:fixed;
+	width:100%;
+	height:50px;
+	background-color:darkcyan;
+	z-index:100;
+	box-shadow:0px 3px 5px lightgoldenrodyellow;
+}
+
+#footer {
+	height:50px;
+	width:100%;
+	background-color:darkcyan;
+	position:absolute;
+	top:1320px;
+	z-index:100;
+	box-shadow:0px 0px 5px 3px lightgoldenrodyellow;
+}
+
+#topText {
+	margin-left:7%;
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:2.28em;
+	font-kerning:auto;
+	color:lightgoldenrodyellow;
+	position:absolute;
+	top:4px;
+}
+
+#mainBox {
+	margin:auto;
+	width:80%;
+}
+
+#photoBanner {
+	margin:auto;
+	width:80%;
+	height:320px;
+	margin-top:85px;
+	overflow:hidden;
+	border-radius:10px;
+	position:absolute;
+	box-shadow:0px 0px 20px 10px lightgoldenrodyellow;
+}
+
+#PhilippineDieties {
+	width:100%;
+}
+
+#navBar {
+	padding:15px 0px 10px 0px;
+	float:right;
+	list-style-type:none;
+	text-align:center;
+	display:block;
+	background-color:darkcyan;
+	width:80%;
+	height:54px;
+	margin-top:440px;
+	border-radius:10px 10px 0px 0px;
+	position:absolute;
+}
+
+.liNav {
+	float:left;
+	padding: 0px 7px;
+	background-color:darkcyan;
+}
+
+.liNav .aNav {
+	text-align: center;
+	text-decoration: none;
+	font-size:1.25em;
+	font-weight:bold;
+	font-family:sans-serif;
+	display:inline;
+	color:lightgoldenrodyellow;
+	background-color:darkcyan;
+	padding: 10px 16px;
+}
+
+.liNav .aNav:hover {
+	background-color:floralwhite;
+	color:teal;
+	border-radius:5px;
+}
+
+#textBox {
+	width:80%;
+	background-color:lightgoldenrodyellow;
+	background-color:floralwhite;
+	height:800px;
+	position:absolute;
+	top:485px;
+	border-radius:10px;
+}
+
+#textContent {
+	width:80%;
+	position:absolute;
+	top:490px;
+	overflow-wrap: break-word;
+	z-index:50;
+}
+
+#qNum {
+	color:grey;
+	padding:20px 30px 0px 50px;
+	font-family:sans-serif;
+}
+
+#qBody {
+	color:grey;
+	padding:0px 50px 0px 50px;
+	justify-content:flex-end;
+	font-family:sans-serif;
+}
+
+#q1opt {
+	margin-left:75px;
+	margin-top:20px;
+}
+
+.qOptions {
+	margin-top:20px;
+	margin-left:25px;
+}
+
+#qNav {
+	margin-left:75px;
+	margin-top:20px;
+}
+
+.questionNav {
+	margin-top:20px;
+}
+
+.quizProg {
+	position:absolute;
+	top:300px;
+	margin-left:50px;
+	width:810px;
+}
+
+.indivResults {
+	position:absolute;
+	margin-top:0px;
+	margin-left:50px;
+	width:810px;
+}
+
+.resultHeader {
+	position:absolute
+	margin:auto;
+	margin-top:50px;
+	color:grey;
+	width:80%;
+}
+
+#resultTitle {
+	float:left;
+	margin-bottom:30px;
+	color:grey;
+	width:80%;
+}
+
