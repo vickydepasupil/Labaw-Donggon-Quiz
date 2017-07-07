@@ -1,5 +1,5 @@
 # LabawDonggonQuiz
-Final project for the first quarter of the program. Used HTML, CSS, JavaScript, jQuery and Bootstrap.
+Final project for the first quarter of the UP ITDC full time program. Used HTML, CSS, JavaScript, jQuery and Bootstrap.
 
 Photos used in the project are mostly from The Aswang Project, an online resource for Philippine mythology, legends and folktales.
 https://www.aswangproject.com/
