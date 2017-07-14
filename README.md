@@ -6,7 +6,7 @@ The Quiz Page asks 10 questions based on the story of Labaw Donggon, as told in 
 
 <img src="https://user-images.githubusercontent.com/29102307/28226663-8b8ecfe2-6909-11e7-8780-3033585e9d61.png">
 
-At the time of creation, I only knew how to write JavaScript and jQuery internally, so the lenghty set of JavaScript and jQuery functions are located inside the MP_QuizPage.html file.
+At the time of creation, I only knew how to use JavaScript and jQuery internally, so the lenghty set of JavaScript and jQuery functions are located inside the MP_QuizPage.html file.
 
 <h3>Home Page</h3>
 <img src="https://user-images.githubusercontent.com/29102307/28225963-f6823cc4-6906-11e7-8bbc-fd54f9ed0cbf.png">
